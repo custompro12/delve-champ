@@ -12,9 +12,6 @@
 html {
     background-color: initial;
 }
-.fossil-guide img {
-    max-width: unset;
-}
 ul {
     list-style: unset;
 }
@@ -105,6 +102,11 @@ body {
     gap: 0.5rem;
 
     z-index: -1;
+}
+
+.fossil-guide img {
+    max-width: unset; /* Bulma override */
+    max-height: 20vh;
 }
 
 h1,
