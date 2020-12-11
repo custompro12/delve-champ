@@ -1,0 +1,38 @@
+{
+    "name": "delve-champ",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "asar:build": "asar pack build/delve-champ-win32-x64/resources/app build/delve-champ-win32-x64/resources/app.asar && rm -rf build/delve-champ-win32-x64/resources/app",
+        "asar:list": "asar list build/delve-champ-win32-x64/resources/app.asar",
+        "make": "npm run make:clean && electron-packager . delve-champ --out=build --platform=win32 --arch=x64 --overwrite --icon app/favicon.ico --ignore=\"(screenshots)|(.gitignore)|(README.md)|(build)\" && npm run asar:build && mv build/delve-champ-win32-x64 build/delve-champ-1.0.0",
+        "make:clean": "rm -rf build"
+    },
+    "keywords": [
+        "Path of Exile",
+        "Path",
+        "PoE",
+        "Delve",
+        "Fossil",
+        "Guide"
+    ],
+    "author": "custompro12",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "bulma": "^0.9.1"
+    },
+    "devDependencies": {
+        "electron": "^11.0.3",
+        "prettier": "^2.2.1"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "arrowParens": "avoid",
+        "singleQuote": true,
+        "tabWidth": 4,
+        "semi": false
+    }
+}
